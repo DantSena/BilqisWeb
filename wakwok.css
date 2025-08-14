@@ -1,0 +1,219 @@
+/* Reset dan Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    min-height: 100vh;
+}
+
+/* Header Identitas */
+.identity-header {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.identity-card {
+    background: white;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.student-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #74b9ff;
+    margin-bottom: 1rem;
+}
+
+.identity-info h1 {
+    color: #2d3436;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.class-info, .school, .nis {
+    color: #636e72;
+    margin: 0.3rem 0;
+    font-size: 1.1rem;
+}
+
+/* Personal Data Section */
+.personal-data {
+    background: white;
+    margin: 2rem auto;
+    max-width: 600px;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.personal-data h2 {
+    color: #0984e3;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.data-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.data-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #74b9ff;
+}
+
+.data-item strong {
+    color: #2d3436;
+    min-width: 150px;
+}
+
+.data-item span {
+    color: #636e72;
+    text-align: right;
+    flex: 1;
+}
+
+/* Assignment Sections */
+.assignment-section {
+    margin: 2rem auto;
+    max-width: 600px;
+    padding: 0 1rem;
+}
+
+.assignment-section h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.assignment-grid, .video-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.assignment-card, .video-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.assignment-card:hover, .video-card:hover {
+    transform: translateY(-5px);
+}
+
+.assignment-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.assignment-info, .video-info {
+    padding: 1.5rem;
+}
+
+.assignment-info h3, .video-info h3 {
+    color: #0984e3;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.assignment-info p, .video-info p {
+    color: #636e72;
+    margin-bottom: 0.5rem;
+}
+
+.date, .duration {
+    background: #74b9ff;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+.student-footer {
+    background: rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.student-footer p {
+    margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .identity-card {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .data-item {
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    .data-item span {
+        text-align: left;
+        margin-top: 0.5rem;
+    }
+    
+    .assignment-grid, .video-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .assignment-section h2, .personal-data h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .identity-info h1 {
+        font-size: 1.5rem;
+    }
+    
+    .class-info, .school, .nis {
+        font-size: 1rem;
+    }
+}
